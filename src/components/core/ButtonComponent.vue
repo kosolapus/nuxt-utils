@@ -1,8 +1,9 @@
 <script setup>
-const a = "sdad"
+const a = 'sdad';
 </script>
+
 <template>
   <button>
-    {{a}}
+    {{ a }}
   </button>
 </template>

@@ -3,9 +3,14 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    '@nuxtjs/eslint-config-typescript',
     'plugin:prettier/recommended',
   ],
-  parser: '@typescript-eslint/parser',
+  parser: 'vue-eslint-parser',
+  ignorePatterns: ['package.json'],
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+  },
   plugins: ['@typescript-eslint', 'simple-import-sort', 'autofix'],
   env: {
     node: true,
