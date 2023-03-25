@@ -26,8 +26,12 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "jest": "^29.5.0",
+    "lint-staged": "^13.2.0",
     "prettier": "2.8.7",
     "ts-jest": "^29.0.5",
     "typescript": "^5.0.2"
+  },
+  "lint-staged": {
+    "{**/*,*}.{js,ts,jsx,tsx,html,vue,json}": "eslint --fix"
   }
 }
