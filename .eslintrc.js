@@ -3,27 +3,26 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:prettier/recommended',
+    '@nuxtjs/eslint-config-typescript'
   ],
   parser: 'vue-eslint-parser',
   ignorePatterns: ['package.json'],
   parserOptions: {
-    parser: '@typescript-eslint/parser',
+    parser: '@typescript-eslint/parser'
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'autofix'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier', 'autofix'],
   env: {
     node: true,
     browser: true,
     commonjs: true,
     es6: true,
-    amd: true,
+    amd: true
   },
   rules: {
     'vue/no-v-html': 'off',
-    // 'simple-import-sort/imports': 'error',
+    'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'autofix/no-debugger': 'error',
-    'vue/no-v-for-template-key': 'off',
-  },
-};
+    'vue/no-v-for-template-key': 'off'
+  }
+}

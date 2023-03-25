@@ -1,5 +1,8 @@
 {
   "singleQuote": true,
+  "semi": false,
+  "endOfLine": "lf",
+  "trailingComma": "es5",
   "jsxSingleQuote": true,
   "arrowParens": "always",
   "max-len": ["error", 140, 2],
