@@ -1,3 +1,3 @@
-import {declOfNum} from "@/utils/decl-of-num";
+import { declOfNum } from '@/utils/decl-of-num';
 
-export {declOfNum}
+export { declOfNum };
