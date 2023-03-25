@@ -1,3 +1,3 @@
-import * as utils from '@/utils/index'
+import * as utils from '@/utils'
 
 export {utils}

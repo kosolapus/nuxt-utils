@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    //...
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -20,5 +19,5 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
-  ],
+  ]
 }
