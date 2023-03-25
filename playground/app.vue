@@ -1,6 +1,6 @@
 <template>
   <div>
-    Nuxt module playground!
+    here aa - <BaseButton />
   </div>
 </template>
 
