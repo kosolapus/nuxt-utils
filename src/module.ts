@@ -1,4 +1,9 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent } from '@nuxt/kit'
+import {
+  defineNuxtModule,
+  addPlugin,
+  createResolver,
+  addComponent,
+} from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
@@ -6,12 +11,12 @@ export interface ModuleOptions {}
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'rns-kit',
-    configKey: 'rns'
+    configKey: 'rns',
   },
   // Default configuration options of the Nuxt module
   defaults: {},
 
-  setup (options, nuxt) {
+  setup() {
     const resolver = createResolver(import.meta.url)
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
@@ -19,11 +24,9 @@ export default defineNuxtModule<ModuleOptions>({
       name: 'BaseButton', // name of the component to be used in vue templates
       filePath: resolver.resolve('./components/base/BaseButton.vue'),
       kebabName: 'base-button',
-      pascalName: 'BaseButton'
+      pascalName: 'BaseButton',
     })
 
     addPlugin(resolver.resolve('./runtime/plugin'))
-
-
-  }
+  },
 })

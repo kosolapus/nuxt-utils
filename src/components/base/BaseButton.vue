@@ -9,8 +9,8 @@ const aa = 'aa'
 </script>
 
 <style lang="scss" scoped>
-.btn{
-  *{
+.btn {
+  * {
     all: unset;
   }
   display: flex;
