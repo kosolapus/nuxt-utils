@@ -1,5 +1,7 @@
 /** @type { import('@storybook/vue3').Preview } */
-const preview = {
+import { Preview } from '@storybook/vue3';
+
+const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
@@ -8,6 +10,11 @@ const preview = {
         date: /Date$/,
       },
       expanded: true,
+    },
+    options: {
+      storySort: {
+        order: ['intro', 'Intro', '*','Atoms'],
+      },
     },
   },
 }

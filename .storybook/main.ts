@@ -5,8 +5,7 @@ const {
   mergeConfig
 } = require('vite');
 module.exports = {
-
-  stories: ['../playground/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../playground/**/*.stories.@(js|jsx|ts|tsx)','../playground/**/*.doc.mdx'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
