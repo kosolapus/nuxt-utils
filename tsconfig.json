@@ -3,5 +3,7 @@
   "paths": {
     "@module/*": ["src/*"],
     "@app/*": ["playground/*"]
-  }
+  },
+  "resolveJsonModule": true,
+  "esModuleInterop": true
 }

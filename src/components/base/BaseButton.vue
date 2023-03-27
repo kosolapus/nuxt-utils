@@ -1,11 +1,24 @@
 <template>
-  <div class="btn">
-    <button>{{ aa }}</button>
+  <div class="btn" :style="computedStyle">
+    <button><slot /></button>
   </div>
 </template>
 
-<script setup>
-const aa = 'aa'
+<script lang="ts" setup>
+import { computed } from '#imports'
+
+const props = defineProps({
+  color: {
+    type: String,
+    default: '#aaa',
+  },
+})
+
+defineEmits(['click', 'mouseover', 'mouseleave'])
+
+const computedStyle = computed(
+  () => `background-color:${props.color || 'transparent'}`
+)
 </script>
 
 <style lang="scss" scoped>
