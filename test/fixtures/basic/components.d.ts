@@ -10,12 +10,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     App: typeof import('./app.vue')['default']
-    BaseBaseButton: typeof import('./../src/components/base/BaseButton.vue')['default']
-    ComponentsBaseBaseButton: typeof import('./../src/components/base/BaseButton.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    StoriesButton: typeof import('./stories/Button.vue')['default']
-    StoriesHeader: typeof import('./stories/Header.vue')['default']
-    StoriesPage: typeof import('./stories/Page.vue')['default']
   }
 }

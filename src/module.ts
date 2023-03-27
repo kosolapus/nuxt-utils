@@ -2,7 +2,7 @@ import {
   defineNuxtModule,
   addPlugin,
   createResolver,
-  addComponent,
+  addComponentsDir,
 } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
@@ -20,11 +20,14 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addComponent({
-      name: 'BaseButton', // name of the component to be used in vue templates
-      filePath: resolver.resolve('./components/base/BaseButton.vue'),
-      kebabName: 'base-button',
-      pascalName: 'BaseButton',
+
+    addComponentsDir({
+      path: resolver.resolve('./components/'),
+      pathPrefix: false,
+      pattern: '**/*.vue',
+      transpile: 'auto',
+      // @ts-ignore
+      global: global !== false,
     })
 
     addPlugin(resolver.resolve('./runtime/plugin'))

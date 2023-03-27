@@ -1,5 +1,5 @@
 <template>
-  <BaseButton></BaseButton>
+  <BaseButton>asd</BaseButton>
 </template>
 
 <script setup lang="ts">
